@@ -14,10 +14,17 @@
 
 .menuBlock{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 .menuBlock > li{
     align-items:center;
+}
+
+.logoBlock img{
+    width: 150px;
+    height: 40px;
+    margin-top:0;
 }
