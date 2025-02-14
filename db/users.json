@@ -1,0 +1,23 @@
+
+{
+    "users":[
+    {
+        "id":1,
+        "Name":"John Doe",
+        "Email":"TgMf4@example.com",
+        "number":1234567891
+    },
+    {
+        "id":2,
+        "Name":"Jane Doe",
+        "Email":"l5tQ5@example.com",
+        "number":1234567891
+    },
+    {
+        "id":3,
+        "Name":"Bob Smith", 
+        "Email":"Hh4dO@example.com",
+        "number":1234567891
+    }
+]
+}

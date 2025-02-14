@@ -9,6 +9,11 @@ const Dashboard = () => {
   const [fi,setFi]=useState('');
   const [co,setCo]=useState('');
 
+  let handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(un,em,pa,ge,ad,fi,co);
+  }
+
 
   return (
     <div>Dashboard
@@ -46,7 +51,7 @@ const Dashboard = () => {
 
         </select>
         <br />
-        <input type="submit"/>
+        <input type="submit" onClick={handleSubmit}/>
                 {/* <button>Choose file</button> */}
       </form>
     </div>
