@@ -1,23 +1,28 @@
-
 {
-    "users":[
+  "users": [
     {
-        "id":1,
-        "Name":"John Doe",
-        "Email":"TgMf4@example.com",
-        "number":1234567891
+      "id": "1",
+      "name": "John Doe",
+      "email": "TgMf4@example.com",
+      "phone": 1234567891
     },
     {
-        "id":2,
-        "Name":"Jane Doe",
-        "Email":"l5tQ5@example.com",
-        "number":1234567891
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "l5tQ5@example.com",
+      "phone": 1234567891
     },
     {
-        "id":3,
-        "Name":"Bob Smith", 
-        "Email":"Hh4dO@example.com",
-        "number":1234567891
+      "id": "3",
+      "name": "Bob Smith",
+      "email": "Hh4dO@example.com",
+      "phone": 1234567891
+    },
+    {
+      "id": "3d5f",
+      "name": "adfqe",
+      "email": "fqw@gmail.com",
+      "phone": "983641034"
     }
-]
+  ]
 }

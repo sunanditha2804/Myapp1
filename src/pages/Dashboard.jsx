@@ -1,58 +1,63 @@
 import React, { useState } from 'react'
 
 const Dashboard = () => {
-  const [un,setUn]=useState('');
-  const [em,setEm]=useState('');
-  const [pa,setPa]=useState('');
-  const [ge,setGe]=useState('');
-  const [ad,setAd]=useState('');
-  const [fi,setFi]=useState('');
-  const [co,setCo]=useState('');
+  const [username ,setUsername] =useState('');
+  const [mail ,setMail] =useState('');
+  const [psw ,setPsw] =useState('');
+  const [gender ,setGender] =useState('');
+  const [address ,setAddress] =useState('');
+  const [country ,setCountry] =useState('');
+  const [file ,setFile] =useState('');
 
-  let handleSubmit=(e)=>{
-    e.preventDefault();
-    console.log(un,em,pa,ge,ad,fi,co);
+  let handleGenderChange=e=>{
+    setGender(e.target.value)
   }
 
-
+  let handleSubmit=e=>{
+    e.preventDefault();
+    console.log({username , mail , psw ,gender , address , country , file});
+  }
   return (
-    <div>Dashboard
-      <br />
-      <br />
-      <form className='form-1'>
-        <label>Username:</label>
-        <input type="text" placeholder='username' value={un} onChange={(e)=>setUn(e.target.value)}/>
-        <br /><br />
-        <label>Email:</label>
-        <input type="email" placeholder='email' value={em} onChange={(e)=>setEm(e.target.value)}/>
-        <br /><br />
-        <label>Password:</label>
-        <input type="password" placeholder='password' value={pa} onChange={(e)=>setPa(e.target.value)}/>
-        <br /><br />
-        <label>Gender:</label>        
-        <input type='radio' name='gender' value='male'/>Male
-        <input type='radio' name='gender' value='female'/>Female
-        <input type='radio' name='gender' value='other'/>Other
-        <br /><br />
-        <label>Address:</label>
-        <input type='text' placeholder='address' value={ad} onChange={(e)=>setAd(e.target.value)}/>
-        <br /><br />
-        <label>File:</label>
-        <input type='file' value={fi} onChange={(e)=>setFi(e.target.value)}/>
-        <br /><br />
-        <label>Country:</label>
-        <select name="country" value={co} onChange={(e)=>setCo(e.target.value)}>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='username'
+        value={username}
+        onChange={(e)=>setUsername(e.target.value)}
+        /> <br/>
+        <input type="email" placeholder='Email'
+         value={mail}
+         onChange={(e)=>setMail(e.target.value)}
+        /> <br/>
+        <input type="password" placeholder='password'
+        value={psw}
+        onChange={(e)=>setPsw(e.target.value)}
+        /> <br/>
 
-          <option value="US">United States</option>
-
-          <option value="UK">United Kingdom</option>
-
-          <option value="CA">Canada</option>
-
+        <input type="radio"  name='gender' checked={gender === "male"} value="male" onChange={handleGenderChange}/><label htmlFor="">Male</label>
+        <input type="radio"  name='gender' checked={gender === "female"} value="female" onChange={handleGenderChange}/><label htmlFor="">Female</label>
+        <input type="radio"  name='gender' checked={gender === "others"} value="others" onChange={handleGenderChange}/><label htmlFor="">Others</label>
+        <br />
+        <textarea name="" id="add" 
+        value={address}
+        onChange={(e)=>setAddress(e.target.value)}
+        ></textarea>
+        <br />
+        <select name="" id="country"
+        value={country}
+        onChange={(e)=>setCountry(e.target.value)}
+        >
+          <option value="">---country---</option>
+          <option value="india">India</option>
+          <option value="pakisthan">Pakisthan</option>
+          <option value="China">China</option>
         </select>
         <br />
-        <input type="submit" onClick={handleSubmit}/>
-                {/* <button>Choose file</button> */}
+        <input type="file" 
+        value={file}
+        onChange={(e)=>setFile(e.target.value)}
+        />
+        <br />
+        <input type="submit" value="SignUp" />
       </form>
     </div>
   )
